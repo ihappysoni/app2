@@ -1,0 +1,10 @@
+name: Triggered workflow
+on:
+  repository_dispatch:
+    types: [trigger-another-repo]
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run some command
+        run: echo "Hello, World!"
